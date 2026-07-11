@@ -1,5 +1,6 @@
 <div align="center">
-<img width="784" height="200" alt="logpose8992" src="https://github.com/user-attachments/assets/7bdfa49c-d436-4d9d-a72b-ce98a77b6d90" />
+  
+<link type="image/png" sizes="120x120" rel="icon" href=".../icons8-star-connect-120.png">
   
   <h1 align="center">Logpose 🧭</h1>
   <p align="center">
