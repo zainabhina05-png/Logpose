@@ -1,65 +1,95 @@
-import Image from "next/image";
+"use client";
 
-export default function Home() {
+import Link from "next/link";
+import dynamic from "next/dynamic";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { Button } from "@/components/ui/Button";
+import type { Island, PassionScore } from "@/lib/types";
+
+const SAMPLE_ISLANDS: Island[] = [
+  { islandId: "1", userId: "demo", name: "Side Project", colorHex: "#C9973B", icon: "💻", archived: false, createdAt: "" },
+  { islandId: "2", userId: "demo", name: "Watercolor", colorHex: "#FF6B4A", icon: "🎨", archived: false, createdAt: "" },
+  { islandId: "3", userId: "demo", name: "Morning Runs", colorHex: "#5C9EA0", icon: "🏃", archived: false, createdAt: "" },
+  { islandId: "4", userId: "demo", name: "Rust Learning", colorHex: "#8B7355", icon: "📚", archived: false, createdAt: "" },
+];
+
+const SAMPLE_SCORES: PassionScore[] = [
+  { islandId: "3", passionScore: 8.2, mostRecentHoursAgo: 12 },
+  { islandId: "4", passionScore: 7.5, mostRecentHoursAgo: 4 },
+  { islandId: "1", passionScore: 5.1, mostRecentHoursAgo: 24 },
+  { islandId: "2", passionScore: 2.3, mostRecentHoursAgo: 96 },
+];
+
+const CompassView = dynamic(
+  () => import("@/components/three/CompassView").then((m) => m.CompassView),
+  { ssr: false, loading: () => <div className="h-[400px] animate-pulse bg-parchment/5 rounded-xl" /> }
+);
+
+export default function LandingPage() {
+  const router = useRouter();
+  const [focusedIslandId, setFocusedIslandId] = useState<string | undefined>(undefined);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="min-h-screen flex flex-col">
+      <header className="flex items-center justify-between px-6 py-4 border-b border-parchment/10">
+        <h1 className="font-display text-2xl font-bold text-brass">Log Pose</h1>
+        <div className="flex gap-3">
+          <Link href="/login">
+            <Button variant="ghost" size="sm">Sign In</Button>
+          </Link>
+          <Link href="/signup">
+            <Button size="sm">Set Sail</Button>
+          </Link>
+        </div>
+      </header>
+
+      <section className="flex-1 flex flex-col lg:flex-row items-center gap-8 px-6 py-12 max-w-6xl mx-auto w-full">
+        <div className="flex-1 space-y-6 text-center lg:text-left">
+          <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight">
+            Chart what burns brightest{" "}
+            <span className="text-ember">right now</span>
+          </h2>
+          <p className="text-lg text-parchment/70 max-w-lg mx-auto lg:mx-0">
+            Log Pose is a passion tracker disguised as a ship&apos;s compass.
+            Your projects are islands. Log time, mood, and notes — the needle
+            drifts toward what you&apos;re most obsessed with. Neglect an island
+            and its light fades.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+            <Link href="/signup">
+              <Button size="lg" className="w-full sm:w-auto">
+                Set Sail — It&apos;s Free
+              </Button>
+            </Link>
+            <Link href="/login">
+              <Button variant="secondary" size="lg" className="w-full sm:w-auto">
+                Continue as Guest
+              </Button>
+            </Link>
+          </div>
+          <p className="font-mono text-xs text-parchment/40">
+            Passion scores computed in Snowflake · Decay + Cortex sentiment
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="flex-1 w-full h-[400px] lg:h-[500px] rounded-xl overflow-hidden border border-brass/20">
+          <CompassView 
+            islands={SAMPLE_ISLANDS} 
+            scores={SAMPLE_SCORES} 
+            focusedIslandId={focusedIslandId}
+            onIslandClick={(id) => {
+              if (!id || focusedIslandId === id) setFocusedIslandId(undefined);
+              else setFocusedIslandId(id);
+            }}
+            onNavigate={() => router.push("/signup")}
+          />
         </div>
-      </main>
-    </div>
+      </section>
+
+      <footer className="px-6 py-4 border-t border-parchment/10 text-center text-sm text-parchment/40">
+        Built for DEV Weekend Challenge — Passion Edition
+      </footer>
+    </main>
   );
 }
