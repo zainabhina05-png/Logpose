@@ -1,5 +1,5 @@
 <div align="center">
-<img width="784" height="400" alt="logpose8992" src="https://github.com/user-attachments/assets/7bdfa49c-d436-4d9d-a72b-ce98a77b6d90" />
+<img width="784" height="200" alt="logpose8992" src="https://github.com/user-attachments/assets/7bdfa49c-d436-4d9d-a72b-ce98a77b6d90" />
   
   <h1 align="center">Logpose 🧭</h1>
   <p align="center">
