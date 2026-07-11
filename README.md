@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./public/favicon.ico" alt="Logo" width="80" height="80">
+  <img width="762" height="496" alt="image" src="https://github.com/user-attachments/assets/52a54911-6417-4d77-8061-5b2697f48e63" />
   <h1 align="center">Logpose 🧭</h1>
   <p align="center">
     <strong>A 3D interactive compass that points to your greatest passions.</strong><br>
@@ -16,8 +16,9 @@
 <br />
 
 <div align="center">
-  <img src="logpose7.png" alt="Landing Page" width="900">
+<img width="1792" height="907" alt="logpose5" src="https://github.com/user-attachments/assets/0ecb86d2-00cd-4fc0-8062-326bd0d04dd6" />
 </div>
+
 
 ## 🌟 About the Project
 
@@ -37,8 +38,11 @@ Inspired by the "Log Pose" from *One Piece* which locks onto the magnetic fields
 ---
 
 <div align="center">
-  <img src="logpose5.png" alt="Dashboard" width="900"><br>
-  <img src="logpose6.png" alt="Island Detail View" width="500">
+
+<img width="1920" height="1080" alt="logpose6" src="https://github.com/user-attachments/assets/dc504014-0ade-4d83-a361-97ce12689e3c" /><br>
+
+<img width="980" height="822" alt="logpose7" src="https://github.com/user-attachments/assets/e01c774a-4925-49ab-843a-792b1bef4b05" />
+
 </div>
 
 ## 🛠️ Tech Stack
