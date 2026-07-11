@@ -1,5 +1,6 @@
 <div align="center">
-  <img width="762" height="496" alt="image" src="https://github.com/user-attachments/assets/52a54911-6417-4d77-8061-5b2697f48e63" />
+<img width="784" height="200" alt="logpose8992" src="https://github.com/user-attachments/assets/7bdfa49c-d436-4d9d-a72b-ce98a77b6d90" />
+
   <h1 align="center">Logpose 🧭</h1>
   <p align="center">
     <strong>A 3D interactive compass that points to your greatest passions.</strong><br>
@@ -39,9 +40,10 @@ Inspired by the "Log Pose" from *One Piece* which locks onto the magnetic fields
 
 <div align="center">
 
-<img width="1920" height="1080" alt="logpose6" src="https://github.com/user-attachments/assets/dc504014-0ade-4d83-a361-97ce12689e3c" /><br>
+<img width="1785" height="907" alt="logpose6" src="https://github.com/user-attachments/assets/0c49fa3f-d545-4741-9ad5-a3befb3e3ff3" />
+<br>
 
-<img width="980" height="822" alt="logpose7" src="https://github.com/user-attachments/assets/e01c774a-4925-49ab-843a-792b1bef4b05" />
+<img width="980" height="602" alt="logpose7" src="https://github.com/user-attachments/assets/e01c774a-4925-49ab-843a-792b1bef4b05" />
 
 </div>
 
