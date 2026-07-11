@@ -6,20 +6,22 @@
     Built for the <a href="https://dev.to/devteam/join-our-dev-weekend-challenge-passion-edition-1000-in-prizes-across-five-winners-submissions-due-july-13-at-659-am-utc-43i0">DEV Weekend Challenge: Passion Edition</a> 
     (Category: Best use of Snowflake ❄️)
   </p>
+  <p align="center">
+    <a href="https://logpose-brown.vercel.app/">
+      <img src="https://img.shields.io/badge/Live%20Demo-View%20App-C9973B?style=for-the-badge" alt="Live Demo">
+    </a>
+  </p>
 </div>
 
 <br />
 
-<!-- SCREENSHOT PLACEHOLDERS - REPLACE THESE LINKS WITH YOUR ACTUAL SCREENSHOTS -->
 <div align="center">
-  <img src="https://via.placeholder.com/800x450.png?text=Replace+with+Landing+Page+Screenshot" alt="Landing Page">
+  <img src="logpose7.png" alt="Landing Page" width="900">
 </div>
-![Uploading logpose5.png…]()
-<img width="980" height="822" alt="logpose7" src="https://github.com/user-attachments/assets/a03a814e-d389-406d-bd0d-c6f353883f83" />
-<img width="1792" height="907" alt="logpose5" src="https://github.com/user-attachments/assets/ad91d835-3a2e-413e-9ebf-e03f9fb7cb8b" />
-
 
 ## 🌟 About the Project
+
+This project was built for the **DEV Community's Weekend Challenge — Passion Edition**, a hackathon focused on building tools around the theme of passion and personal growth.
 
 **Passion pulls us in different directions.** Logpose is a beautiful, gamified tool for tracking the hobbies, side-projects, and crafts you pour your heart into. 
 
@@ -35,8 +37,8 @@ Inspired by the "Log Pose" from *One Piece* which locks onto the magnetic fields
 ---
 
 <div align="center">
-  <!-- SECOND SCREENSHOT PLACEHOLDER -->
-  <img src="https://via.placeholder.com/800x450.png?text=Replace+with+Dashboard+Screenshot" alt="Dashboard">
+  <img src="logpose5.png" alt="Dashboard" width="900"><br>
+  <img src="logpose6.png" alt="Island Detail View" width="500">
 </div>
 
 ## 🛠️ Tech Stack
@@ -58,18 +60,18 @@ To run this project locally, you will need Node.js and a Snowflake account.
 ### Installation
 
 1. Clone the repository
-   ```sh
+```sh
    git clone https://github.com/your-username/logpose.git
    cd logpose
-   ```
+```
 
 2. Install NPM packages
-   ```sh
+```sh
    npm install
-   ```
+```
 
 3. Setup your `.env.local` file at the root of the project with your Snowflake credentials:
-   ```env
+```env
    # Authentication
    JWT_SECRET=your_super_secret_jwt_key
 
@@ -81,12 +83,12 @@ To run this project locally, you will need Node.js and a Snowflake account.
    SNOWFLAKE_SCHEMA=your_schema_name
    SNOWFLAKE_WAREHOUSE=your_warehouse_name
    SNOWFLAKE_ROLE=your_role
-   ```
+```
 
 4. Run the development server
-   ```sh
+```sh
    npm run dev
-   ```
+```
 5. Open `http://localhost:3000` to view the app!
 
 ## 📜 Snowflake Database Schema
