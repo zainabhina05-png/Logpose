@@ -4,6 +4,7 @@ import { getSessionFromCookies } from "@/lib/auth";
 import { EntrySchema, EntriesQuerySchema } from "@/lib/validation";
 import { dbError, unauthorized, validationError } from "@/lib/api-utils";
 import type { Entry } from "@/lib/types";
+import { computeSentiment } from "@/lib/sentiment";
 
 interface EntryRow {
   ENTRY_ID: string;
@@ -53,7 +54,7 @@ export async function POST(request: Request) {
       );
     }
 
-    let sentimentScore = 0;
+    const sentimentScore = await computeSentiment(note);
 
     await execute(
       `INSERT INTO entries (island_id, user_id, minutes_spent, mood_score, note, sentiment_score)
