@@ -14,6 +14,10 @@
 <div align="center">
   <img src="https://via.placeholder.com/800x450.png?text=Replace+with+Landing+Page+Screenshot" alt="Landing Page">
 </div>
+![Uploading logpose5.png…]()
+<img width="980" height="822" alt="logpose7" src="https://github.com/user-attachments/assets/a03a814e-d389-406d-bd0d-c6f353883f83" />
+<img width="1792" height="907" alt="logpose5" src="https://github.com/user-attachments/assets/ad91d835-3a2e-413e-9ebf-e03f9fb7cb8b" />
+
 
 ## 🌟 About the Project
 
