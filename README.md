@@ -1,5 +1,5 @@
 <div align="center">
-<img width="784" height="500" alt="logpose8992" src="https://github.com/user-attachments/assets/7bdfa49c-d436-4d9d-a72b-ce98a77b6d90" />
+<img width="784" height="400" alt="logpose8992" src="https://github.com/user-attachments/assets/7bdfa49c-d436-4d9d-a72b-ce98a77b6d90" />
   
   <h1 align="center">Logpose 🧭</h1>
   <p align="center">
@@ -49,7 +49,7 @@ Inspired by the "Log Pose" from *One Piece* which locks onto the magnetic fields
 <br>
 
 ### ✨ Island Detail:
-<img width="1120" height="978" alt="logpose7" src="https://github.com/user-attachments/assets/e01c774a-4925-49ab-843a-792b1bef4b05" />
+<img width="978" height="978" alt="logpose7" src="https://github.com/user-attachments/assets/e01c774a-4925-49ab-843a-792b1bef4b05" />
 
 </div>
 
